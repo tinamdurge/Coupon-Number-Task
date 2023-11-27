@@ -2,20 +2,20 @@
 import java.util.Scanner;
 
 public class CouponNumber {
-		    public static int getCouponNumber(int n) {
-		        return (int) (Math.random() * n);
+		    public static int getCouponNumber(int N) {
+		        return (int) (Math.random() * N);
 		    }
 		    public static void main(String args[]) {
-		    	int n;
+		    	int N;
 		    	Scanner sc=new Scanner(System.in);
-		    	System.out.println("Enter n");
-		    	n=sc.nextInt();
+		    	System.out.println("Enter N");
+		    	N=sc.nextInt();
 		    	
-		        boolean[] isCollected = new boolean[n];  
+		        boolean[] isCollected = new boolean[N];  
 		        int count = 0;                           
 		        int distinct  = 0;                      
-		        while (distinct < n) {
-		            int value = getCouponNumber(n);            
+		        while (distinct < N) {
+		            int value = getCouponNumber(N);            
 		            count++;                             
 		            if (!isCollected[value]) {           
 		                distinct++;
